@@ -6,6 +6,6 @@
         <p>Welcome {{ user.email }}</p>
     {% else %}
         <p><a href="{% url 'login' %}">Login</a></p>
-        <p><a href="">Signup</a></p>
+        <p><a href="{% url 'signup' %}">Signup</a></p>
     {% endif %}
 {% endblock %}
