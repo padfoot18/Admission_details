@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from django.contrib.auth.views import LoginView
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('student/', include('student_details.urls')),
     path('user/', include('core.urls')),
+    path('user/login/', LoginView.as_view(redirect_authenticated_user=True), name='login'),
     path('user/', include('django.contrib.auth.urls')),
 ]
+
+# can subclass LoginView to add css to form

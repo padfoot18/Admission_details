@@ -1,0 +1,6 @@
+{% extends 'index.html' %}
+{% block content %}
+    <p>Fname: {{ request.user.first_name }}</p>
+    <p>Mname: {{ request.user.middle_name }}</p>
+    <p>Lname: {{ request.user.last_name }}</p>
+{% endblock %}
