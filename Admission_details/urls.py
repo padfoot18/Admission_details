@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth.views import LoginView
 urlpatterns = [
+    path('', include('core.urls')),
     path('admin/', admin.site.urls),
     # path('student/', include('student_details.urls')),
     path('user/', include('core.urls')),

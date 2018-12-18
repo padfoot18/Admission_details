@@ -3,4 +3,5 @@
     <p>Fname: {{ request.user.first_name }}</p>
     <p>Mname: {{ request.user.middle_name }}</p>
     <p>Lname: {{ request.user.last_name }}</p>
+    <p><a href="{% url 'home' %}">Home</a></p>
 {% endblock %}

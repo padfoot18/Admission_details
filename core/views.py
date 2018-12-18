@@ -4,6 +4,7 @@ from django.views.generic import CreateView
 from .forms import CustomUserCreationForm
 from django.contrib.auth.decorators import login_required
 
+
 def home(request):
     return render(request, 'core/homepage.html')
 
@@ -16,4 +17,4 @@ class UserSignUp(CreateView):
 
 @login_required(login_url='/user/login/')
 def profile(request):
-    return render(request, 'user_profile.html')
+    return render(request, 'core/user_profile.html')
